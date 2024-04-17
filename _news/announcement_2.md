@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A long announcement with details
-date: 2015-11-07 16:11:00-0400
+date: 2015-11-07
 inline: false
 related_posts: false
 ---
@@ -14,12 +14,8 @@ Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptow
 
 #### Hipster list
 
-<ul>
-    <li>brunch</li>
-    <li>fixie</li>
-    <li>raybans</li>
-    <li>messenger bag</li>
-</ul>
+* brunch
+* fixie
 
 Hoodie Thundercats retro, tote bag 8-bit Godard craft beer gastropub. Truffaut Tumblr taxidermy, raw denim Kickstarter sartorial dreamcatcher. Quinoa chambray slow-carb salvia readymade, bicycle rights 90's yr typewriter selfies letterpress cardigan vegan.
 
