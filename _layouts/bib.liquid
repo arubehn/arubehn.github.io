@@ -57,11 +57,11 @@
         {% if site.scholar.last_name contains author_last_name %}
           {% if site.scholar.first_name contains author.first %}
             {% assign author_is_self = true %}
-          {% endif %}
+          {%- endif -%}
         {%- endif -%}
         {% assign coauthor_url = null %}
         {%- assign clean_last_name = author_last_name | downcase | remove_accents -%}
-        {% if site.data.coauthors[clean_last_name] %}
+        {%- if site.data.coauthors[clean_last_name] -%}
           {%- for coauthor in site.data.coauthors[clean_last_name] -%}
             {% if coauthor.firstname contains author.first %}
               {%- assign coauthor_url = coauthor.url -%}
@@ -87,7 +87,7 @@
             </a>
           {%- else -%}
             {{ author.first }}
-            {{ author.last }}
+            {{ author.last -}}
           {% endif %}
         {%- endif -%}
       {% endfor %}
@@ -133,9 +133,9 @@
     {% if entry.type == 'article' %}
       {% capture entrytype %}<em>{{entry.journal}}</em>{% endcapture %}
     {% elsif proceedings contains entry.type %}
-      {% capture entrytype %}<em>In {{entry.booktitle}}</em> {% endcapture %}
+      {% capture entrytype %}In <em>{{ entry.booktitle}}</em> {%- endcapture -%}
     {% elsif thesis contains entry.type %}
-      {% capture entrytype %}<em>{{entry.school}}</em> {% endcapture %}
+      {% capture entrytype %}<em>{{entry.school}}</em> {%- endcapture -%}
     {% else %}
       {% capture entrytype %}{% endcapture %}
     {% endif %}
@@ -155,10 +155,10 @@
     {% if hook_exists == 'true' %}
       {% include hook/bib.liquid %}
     {% endif %}
-    {% assign entrytype_text = entrytype | strip_html | strip %}
+    {% assign entrytype_text = entrytype | strip | strip_html | strip %}
     {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}
     <div class="periodical">
-      {{ periodical | strip }}
+      {{ periodical | strip}}
     </div>
     <div class="periodical">
       {{ entry.note | strip }}
