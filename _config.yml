@@ -315,7 +315,7 @@ scholar:
   group_order: ascending, descending
 
   type_aliases: { inproceedings: article }
-  type_names: { article: Papers }
+  type_names: { article: Papers , talk : Talks }
 
 # Display different badges withs stats for your publications
 enable_publication_badges:

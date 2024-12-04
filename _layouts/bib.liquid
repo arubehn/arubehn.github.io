@@ -80,9 +80,9 @@
           {%- if forloop.last and author_array_limit == author_array_size %}and&nbsp;{% endif -%}
         {% endif %}
         {%- if author_is_self -%}
-          <b>
+          <em>
             {{- author.first }} {{ author.last -}}
-          </b>
+          </em>
         {%- else -%}
           {%- if coauthor_url -%}
             <a href="{{coauthor_url}}">
@@ -140,15 +140,15 @@
       {% capture entrytype %}In <em>{{ entry.booktitle}}</em> {%- endcapture -%}
     {% elsif thesis contains entry.type %}
       {% capture entrytype %}<em>{{entry.school}}</em> {%- endcapture -%}
+    {% elsif entry.type == 'talk' %}
+      {% capture entrytype %}<em>{{entry.venue}}</em> {%- endcapture -%}
     {% else %}
       {% capture entrytype %}{% endcapture %}
     {% endif %}
     {% if entry.month %}
       {% capture entrymonth %}{{ " " }}{{ entry.month | capitalize }}{% endcapture %}
     {% endif %}
-    {% if entry.year %}
-      {% capture entryyear %}{{ " " }}{{entry.year}}{% endcapture %}
-    {% endif %}
+    
     {% if entry.location %}
       {% capture entrytype %}{{entrytype}}{{ ", " }}{{entry.location}}{% endcapture %}
     {% endif -%}
@@ -160,7 +160,7 @@
       {% include hook/bib.liquid %}
     {% endif %}
     {% assign entrytype_text = entrytype | strip | strip_html | strip %}
-    {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}
+    {% capture periodical %}{{ entrytype }}{% if entry.date %}. {{ entry.date }}.{% endif %}{% endcapture %}
     <div class="periodical">
       {{ periodical | strip}}
     </div>
