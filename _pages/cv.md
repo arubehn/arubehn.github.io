@@ -4,7 +4,7 @@ permalink: /cv/
 title: cv
 alt_title: <span class="font-weight-bold">c</span>urriculum <span class="font-weight-bold">v</span>itae
 nav: true
-nav_order: 4
+nav_order: 5
 cv_pdf: example_pdf.pdf
 description: 
 ---
