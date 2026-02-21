@@ -30,7 +30,11 @@ export default function RootLayout({
         className={'antialiased'}
       >
         <Navbar/>
-        {children}
+        <main className="pt-28">
+          <div className="page-container">
+            {children}
+          </div>
+        </main>
       </body>
     </html>
   );
