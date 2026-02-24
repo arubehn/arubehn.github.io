@@ -105,6 +105,21 @@ export default function Navbar() {
               </Link>
             </li>
 
+            <li>
+              <Link
+                href="/cv"
+                className={`${linkBase} ${
+                  pathname.startsWith("/cv")
+                    ? activeClass
+                    : inactiveClass
+                 }`
+            }
+            onClick={() => setIsOpen(false)}
+              >
+                cv
+              </Link>
+            </li>
+
           </ul>
         </div>
 
