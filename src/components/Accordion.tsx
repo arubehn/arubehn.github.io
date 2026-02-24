@@ -19,7 +19,7 @@ export function SimpleAccordion({ post }: NewsPostProps) {
      <label
        htmlFor="expandCollapse"
        className=
-         "w-full flex justify-left p-2 rounded-sm items-center bg-background hover:bg-(--theme) transition-colors duration-1000 ease-in-out"
+         "w-full flex justify-left p-2 rounded-sm items-center bg-background hover:bg-(--theme) hover:text-white transition-colors duration-1000 ease-in-out"
        onClick={() => setOpen(!open)}
      >
        <div className="flex w-full">

@@ -1,7 +1,11 @@
-import fs from "fs"
+/* eslint-disable @typescript-eslint/no-require-imports */
+
+export const dynamic = "force-static"
+
+import fs from "fs";
 
 function parseBibtex(input: string): BibtexParseResult {
-  var bibtexParse = require('@orcid/bibtex-parse-js');
+  const bibtexParse = require('@orcid/bibtex-parse-js');
   return bibtexParse.toJSON(input) as BibtexParseResult
 }
 
@@ -132,10 +136,9 @@ function TalkInfo ( { entryTags }: BibliographyEntryTagsProps ) {
 function Reference({ entry }: BibliographyEntryProps) {
   const entryType = entry.entryType;
   const entryTags = entry.entryTags;
-  var authors = entryTags.author.replaceAll("and", "&");
-  var year = entryTags.year;
-  var title = entryTags.title;
-  var bibString = " (" + year + "). " + title + ".";
+  const authors = entryTags.author.replaceAll("and", "&");
+  const year = entryTags.year;
+  const title = entryTags.title;
   if (entryType.toLowerCase() === "article") {
     return <span><BaseCitation title={title} authors={authors} year={year}/> <ArticleInfo entryTags={entryTags}/></span>
   } else if (entryType.toLowerCase() === "inproceedings") {
