@@ -8,7 +8,7 @@ type TableContentsProp = {
 
 function CVTable({tableContents}: TableContentsProp) {
     return (
-        <div className="overflow-x-auto border-0 bg-neutral-primary-soft shadow-xs mt-2 mb-4">
+        <div className="overflow-x-auto border-0 bg-neutral-primary-soft mt-2 mb-4">
             <table className="table-fixed w-full text-left rtl:text-right text-body">
                 <colgroup>
                     <col className="w-1/4" />
