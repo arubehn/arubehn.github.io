@@ -25,9 +25,9 @@ export default function HomePage() {
       </article>
       <h1>latest news</h1>
       <NewsSnippet/>
-      <div className="border-t">
-          <IconBar className="w-10 text-primary hover:text-(--theme) transition-colors" />
-        </div>
+
+      <IconBar className="h-16 text-primary hover:text-(--theme) transition-colors" />
+
     </div>
   )
 }

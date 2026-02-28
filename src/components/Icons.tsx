@@ -60,7 +60,7 @@ function MailIcon({className}: {className?: string}) {
 
 export function IconBar({className}: {className?: string}) {
     return (
-    <div className="w-full mt-4">
+    <div className="w-full mt-10">
         <ul className="w-full flex justify-center items-center gap-16">
             <li><MailIcon className={className}/></li> 
             <li><OrcidIcon className={className}/></li> 
