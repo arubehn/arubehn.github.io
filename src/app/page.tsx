@@ -26,7 +26,7 @@ export default function HomePage() {
       <h1>latest news</h1>
       <NewsSnippet/>
 
-      <IconBar className="h-16 text-primary hover:text-(--theme) transition-colors" />
+      <IconBar className="h-20 text-primary hover:text-(--theme) transition-colors" />
 
     </div>
   )
