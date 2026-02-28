@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
@@ -28,7 +28,7 @@ export default function Navbar() {
         <div
           className={`
             ${isOpen ? "block" : "hidden"}
-            w-full md:block md:w-auto bg-background flex-grow md:flex-none
+            w-full md:block md:w-auto bg-background md:flex-none mt-40 md:mt-0
           `}
         >
           <ul className="flex flex-col md:flex-row md:space-x-8 mt-40 md:mt-0 p-4 md:p-0 border md:border-0 rounded-base bg-neutral-secondary-soft">

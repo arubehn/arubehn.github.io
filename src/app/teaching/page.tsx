@@ -15,7 +15,7 @@ export default function HomePage() {
       </ul>
       <h2 className="mt-2">summer 2025</h2>
       <ul className="ml-8">
-        <li><Link href="/teaching/ss25-sprachvariation" className="font-semibold hover:underline text-(--theme)">Sprachvariation.</Link> Proseminar, University of Passau. <a href="https://arne.rubehn.com/assets/pdf/sprachvariation-handout.pdf"><button>HANDOUT</button></a></li>
+        <li><Link href="/teaching/ss25-sprachvariation" className="font-semibold hover:underline text-(--theme)">Sprachvariation.</Link> Proseminar, University of Passau.</li>
       </ul>
     </div>
   )

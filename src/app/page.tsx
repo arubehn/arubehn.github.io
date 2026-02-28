@@ -1,4 +1,5 @@
 import { NewsSnippet } from "@/components/News"
+import { IconBar } from "@/components/Icons"
 
 export default function HomePage() {
 
@@ -24,6 +25,9 @@ export default function HomePage() {
       </article>
       <h1>latest news</h1>
       <NewsSnippet/>
+      <div className="border-t">
+          <IconBar className="w-10 text-primary hover:text-(--theme) transition-colors" />
+        </div>
     </div>
   )
 }
