@@ -119,11 +119,13 @@ function TalkInfo ( { entryTags }: BibliographyEntryTagsProps ) {
     date,
     venue,
     location,
-    note
+    note,
+    eventtype
   } = entryTags
 
   return (
     <span>
+      {eventtype ? `${eventtype} ` : ""}
       <i>{venue}</i>
       {location ? `, ${location}` : ""}
       {date ? `, ${date}` : ""}
@@ -204,5 +206,41 @@ export function Bibliography({ filePath }: {filePath: string}) {
           <li key={entry.citationKey}><BibliographyEntry entry={entry}/></li>
         ))}
       </ul>
+    )
+}
+
+export function TalksBibliography({ filePath }: {filePath: string}) {
+    const s = fs.readFileSync(filePath, "utf-8");
+    const parsed = parseBibtex(s);
+    const upcomingTalks = parsed.filter((talk) => Date.parse(talk.entryTags.date) > Date.now());
+    const pastTalks = parsed.filter((talk) => Date.parse(talk.entryTags.date) < Date.now());
+
+    if (upcomingTalks.length > 0) {
+    return (
+      <div>
+      <h2>upcoming talks</h2>
+        <ul>
+        {upcomingTalks.map((entry) => (
+          <li key={entry.citationKey}><BibliographyEntry entry={entry}/></li>
+        ))}
+        </ul>
+        <h2>past talks</h2>
+        <ul>
+        {pastTalks.map((entry) => (
+          <li key={entry.citationKey}><BibliographyEntry entry={entry}/></li>
+        ))}
+        </ul>
+      </div>
+    ) }
+
+    return (
+      <div>
+        <h2>past talks</h2>
+        <ul>
+        {pastTalks.map((entry) => (
+          <li key={entry.citationKey}><BibliographyEntry entry={entry}/></li>
+        ))}
+        </ul>
+      </div>
     )
 }

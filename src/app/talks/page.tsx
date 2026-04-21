@@ -1,4 +1,4 @@
-import { Bibliography } from "@/components/Bibliography";
+import { TalksBibliography } from "@/components/Bibliography";
 import path from "path"
 
 
@@ -8,7 +8,7 @@ export default function HomePage() {
   return (
     <div>
       <h1>talks</h1>
-      <Bibliography filePath={filePath}></Bibliography>
+      <TalksBibliography filePath={filePath}></TalksBibliography>
     </div>
   )
 }
