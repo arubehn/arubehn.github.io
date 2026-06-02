@@ -43,6 +43,7 @@ export default function HomePage() {
     const professionalExperience = {
         "10/2023-present": "Researcher (wissenschaftlicher Mitarbeiter), Chair for Multilingual Computational Linguistics, University of Passau.",
         "12/2024-present": "Freelancer offering diverse services related to computational linguistics, including software development, data annotation, and consulting.",
+        "05/2026-present": "Researcher (wissenschaftlicher Mitarbeiter), Chair for the Political System of the Federal Republic and Political Education, University of Passau.",
         "12/2019-09/2023": "Research Assistant (wissenschaftliche Hilfskraft), Department of Linguistics, University of Tübingen.",
         "10/2021-03/2022": "AI Researcher (working student), Mercedes-Benz AG. Böblingen, Germany.",
         "12/2015-11/2019": "Various student jobs at ad agents GmbH, Dolce Vita, and Lofec GmbH."
