@@ -36,11 +36,14 @@ export default function HomePage() {
                     slidesLink={formatLink("06-syntypo-slides.pdf")}/>
                 <TableRow date="02.06.2026" topic="Lexikalische Typologie" handoutLink={formatLink("07-lexikon-handout.pdf")} 
                     slidesLink={formatLink("07-lexikon-slides.pdf")}/>
-                <TableRow date="09.06.2026" topic="Verbkategorien"/>
-                <TableRow date="16.06.2026" topic="Linguistische Relativität"/>
-                <TableRow date="23.06.2026" topic="Numerus und Zahlensysteme"/>
-                <TableRow date="30.06.2026" topic="Farbbenennung"/>
-                <TableRow date="07.07.2026" topic="Lautsymbolismus"/>
+                <TableRow date="09.06.2026" topic="Verbkategorien" handoutLink={formatLink("08-verbkategorien-handout.pdf")} 
+                    slidesLink={formatLink("08-verbkategorien-slides.pdf")}/>
+                <TableRow date="23.06.2026" topic="Linguistische Relativität" handoutLink={formatLink("09-relativitaet-handout.pdf")} 
+                    slidesLink={formatLink("09-relativitaet-slides.pdf")}/>
+                <TableRow date="30.06.2026" topic="Farbbenennung" handoutLink={formatLink("11-farben-handout.pdf")} 
+                    slidesLink={formatLink("11-farben-slides.pdf")}/>
+                <TableRow date="07.07.2026" topic="Lautsymbolismus" handoutLink={formatLink("12-lautsymbolismus-handout.pdf")} 
+                    slidesLink={formatLink("12-lautsymbolismus-slides.pdf")}/>
                 <TableRow date="14.07.2026" topic="Prüfungsvorbereitung"/>
                 </tbody>
             </table>
