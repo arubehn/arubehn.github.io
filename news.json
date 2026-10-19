@@ -1,5 +1,11 @@
 [
     {
+        "date": "2026-10-15",
+        "title": "New preprint on concept embeddings",
+        "text": "I have published a new preprint on arXiv, presenting an inductive framework for learning concept embeddings from colexification data.",
+        "link": "https://doi.org/10.48550/arXiv.2610.22638"
+    },
+    {
         "date": "2026-10-12",
         "title": "New preprint: Besra",
         "text": "A new preprint in which I was involved has appeared, lead by Kellen Parker van Dam. The paper describes Besra, a new software tool for speech annotation, phonetic analysis, and computer-assisted fieldwork.",
